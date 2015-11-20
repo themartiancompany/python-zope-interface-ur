@@ -5,7 +5,7 @@
 pkgbase=python-zope-interface
 pkgname=('python-zope-interface' 'python2-zope-interface')
 pkgver=4.1.3
-pkgrel=1
+pkgrel=2
 license=('ZPL')
 arch=('i686' 'x86_64')
 url="http://pypi.python.org/pypi/zope.interface"
@@ -40,7 +40,6 @@ package_python-zope-interface() {
  
   cd "${srcdir}/zope.interface-${pkgver}"
   python setup.py install --prefix=/usr --root="${pkgdir}" --optimize=1
-  cp src/zope/__init__.py "${pkgdir}/usr/lib/python3.5/site-packages/zope/"
 }
 
 package_python2-zope-interface(){
@@ -51,5 +50,4 @@ package_python2-zope-interface(){
 
   cd "${srcdir}/zope.interface-${pkgver}-py2"
   python2 setup.py install --prefix=/usr --root="${pkgdir}" --optimize=1
-  cp src/zope/__init__.py "${pkgdir}/usr/lib/python2.7/site-packages/zope/"
 }
