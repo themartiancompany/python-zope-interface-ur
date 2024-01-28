@@ -45,7 +45,12 @@ check() {
 
 package() {
   cd zope.interface-$pkgver
-  python setup.py install --prefix=/usr --root="$pkgdir" --optimize=1
+  python \
+    setup.py \
+      install \
+      --prefix=/usr \
+      --root="${pkgdir}" \
+      --optimize=1
 }
 
 # vim:set sw=2 sts=-1 et:
