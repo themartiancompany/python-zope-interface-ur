@@ -49,7 +49,7 @@ package() {
     setup.py \
       install \
       --prefix=/usr \
-      --root="${pkgdir}" \
+      --root "${pkgdir}" \
       --optimize=1
 }
 
